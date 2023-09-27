@@ -11,12 +11,33 @@ export class DataBindingComponent {
   cursoAngular: boolean = true;
   urlImagem = 'https://i.pinimg.com/564x/14/8b/b1/148bb15d13eb8fa4266ea3174ec56ed0.jpg'
 
+  valorAtual: String = '';
+  valorSalvo: String = '';
+  isMouseOver: boolean = false;
+
   getValor(){
     return 3;
   }
   getCurtirCurso(){
     return true;
   }
+
+  botaoClicado(){
+    alert('Botão clicado!');
+  }
+  
+  onKeyUp(evento: KeyboardEvent){
+    this.valorAtual = (<HTMLInputElement>evento.target).value;
+  }
+
+  salvarValor(valor: any){
+    this.valorSalvo = valor;
+  }
+
+  onMouseOverOut(){
+    this.isMouseOver = !this.isMouseOver;
+  }
+
   constructor(){
 
   }
