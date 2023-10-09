@@ -22,6 +22,8 @@ export class DataBindingComponent {
     nome:'Amos',
     idade : 21,
   }
+valorInicial: number | undefined;
+onMudouValor: any;
 
   getValor(){
     return 3;
